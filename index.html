@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Captcha Task Demo</title>
+  </head>
+  <body>
+    <h1>Captcha Task Demo</h1>
+    <div id="captcha-url"></div>
+    <div id="captcha-solution">Not solved</div>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const url = params.get('url') || 'no-url-provided';
+      document.getElementById('captcha-url').textContent = url;
+      // sample solver stub (replace with real solver)
+      setTimeout(()=>document.getElementById('captcha-solution').textContent='SAMPLE-SOLVE', 1000);
+    </script>
+  </body>
+</html>
